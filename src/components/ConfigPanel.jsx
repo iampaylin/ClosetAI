@@ -1,5 +1,5 @@
 import React from "react";
-import { NECKLINES, COLOR_GROUPS } from "../data/options";
+import { NECKLINES, FABRICS, COLOR_GROUPS } from "../data/options";
 import { usePrompt } from "../context/PromptContext";
 
 const ConfigPanel = ({ itemType, currentSelection, onUpdate }) => {
@@ -51,7 +51,7 @@ const ConfigPanel = ({ itemType, currentSelection, onUpdate }) => {
   // CLOTHING MODE
   if (!currentSelection || !currentSelection.item) return null;
 
-  const { item, color, neckline } = currentSelection;
+  const { item, color, fabric, neckline } = currentSelection;
 
   return (
     <div style={panelStyle}>
@@ -137,7 +137,7 @@ const ConfigPanel = ({ itemType, currentSelection, onUpdate }) => {
           </div>
         </div>
 
-        {/* FABRICS 
+        {/* FABRICS */}
         <div>
           <label style={labelStyle}>Fabric</label>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -151,27 +151,27 @@ const ConfigPanel = ({ itemType, currentSelection, onUpdate }) => {
               </button>
             ))}
           </div>
-        </div> */}
+        </div>
 
         {/* NECKLINES - Only for Top/Dress/Fantasies */}
         {(itemType === "top" ||
           itemType === "dress" ||
           itemType === "fantasies") && (
-            <div>
-              <label style={labelStyle}>Neckline</label>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-                {NECKLINES.map((n) => (
-                  <button
-                    key={n.id}
-                    onClick={() => onUpdate("neckline", n)}
-                    style={getBtnStyle(neckline?.id === n.id)}
-                  >
-                    {n.label}
-                  </button>
-                ))}
-              </div>
+          <div>
+            <label style={labelStyle}>Neckline</label>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+              {NECKLINES.map((n) => (
+                <button
+                  key={n.id}
+                  onClick={() => onUpdate("neckline", n)}
+                  style={getBtnStyle(neckline?.id === n.id)}
+                >
+                  {n.label}
+                </button>
+              ))}
             </div>
-          )}
+          </div>
+        )}
       </div>
     </div>
   );

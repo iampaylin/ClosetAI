@@ -283,22 +283,7 @@ export const POSES_CATEGORIES = [
             { id: "hands_pockets", label: "Mãos no Bolso", value: "mãos nos bolsos" },
             { id: "arms_crossed", label: "Braços Cruzados", value: "braços cruzados" },
             { id: "looking_side", label: "Olhando para o Lado", value: "olhando para o lado" },
-            { id: "hair_flip", label: "Jogando o Cabelo", value: "jogando o cabelo" },
             { id: "over_shoulder", label: "De costas, olhando por cima do Ombro", value: "de costas, olhando por cima do ombro" },
-            { id: "costas", label: "De Costas", value: "de costas" },
-        ]
-    },
-    {
-        id: 'sensual',
-        label: 'Ousadas',
-        items: [
-            { id: "kneeling", label: "Ajoelhada", value: "ajoelhada, pose elegante" },
-            { id: "lying_back", label: "Deitada de Costas", value: "deitada de costas, pose de moda" },
-            { id: "crawling", label: "Engatinhando (Pose)", value: "pose dinâmica no chão" },
-            { id: "arched_back", label: "Costas Arqueadas", value: "costas arqueadas, pose artística" },
-            { id: "looking_shoulder", label: "Olhando Ombro", value: "olhando para trás por cima do ombro" },
-            { id: "legs_up", label: "Pernas pro Ar", value: "deitada pernas para cima, pose criativa" },
-            { id: "squatting", label: "Agachada (Squat)", value: "agachada, pose moderna" },
         ]
     },
     {
@@ -308,8 +293,6 @@ export const POSES_CATEGORIES = [
             { id: "high_fashion", label: "High Fashion", value: "pose high fashion, angular" },
             { id: "hand_hip", label: "Mão na Cintura", value: "mão na cintura, pose confiante" },
             { id: "leaning_wall", label: "Apoio na Parede", value: "apoiada na parede" },
-            { id: "jumping", label: "Pulando", value: "pulando, pose dinâmica" },
-            { id: "running", label: "Correndo", value: "correndo" },
         ]
     }
 ];
@@ -329,14 +312,16 @@ export const SCENERY_CATEGORIES = [
         id: 'turistic_landmarks',
         label: 'Pontos turísticos',
         items: [
-            { id: "torre_eiffel", label: "Torre Eiffel", value: "A realistic nighttime photograph of the Eiffel Tower base and structure. Warm golden sodium lights illuminate the intricate ironwork from within, casting long, dramatic geometric shadows across the beams and the wet asphalt ground below. The metal texture is rough and detailed. In the background, out of focus, the city lights of Paris glitter and reflect on the River Seine under a dark indigo sky" },
+            {
+                id: "torre_eiffel", label: "Torre Eiffel", value: "Foto ao ar livre com a Torre Eiffel ao fundo, enquadramento elegante, arquitetura metálica visível, céu levemente dourado de fim de tarde. Luz natural suave, sombras delicadas no chão, atmosfera romântica parisiense, fundo urbano realista e sofisticado."
+            },
         ]
     },
 ];
 export const SCENERY = SCENERY_CATEGORIES.flatMap(c => c.items);
 
 // Attributes 
-/*
+
 export const FABRICS = [
     { id: "cotton", label: "Algodão", value: "algodão" },
     { id: "silk", label: "Seda", value: "seda" },
@@ -348,7 +333,7 @@ export const FABRICS = [
     { id: "lace", label: "Renda", value: "renda" },
     { id: "spandex", label: "Spandex", value: "spandex" },
     { id: "fur", label: "Pele (Fake)", value: "pele falsa" },
-]; */
+];
 
 export const NECKLINES = [
     { id: "hard_plunging", label: "Decote Profundo", value: "plunging neckline" }, // plunging neckline
